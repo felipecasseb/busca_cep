@@ -1,3 +1,5 @@
+import 'package:busca_cep/components/textStatic.dart';
+import 'package:busca_cep/components/text_variable.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -17,7 +19,7 @@ class _HomeState extends State<Home> {
   String _cidade = "";
   String _uf = "";
   String _ddd = "";
-
+  
   var buscou = false;
 
   TextEditingController cepController = TextEditingController();
@@ -105,48 +107,48 @@ class _HomeState extends State<Home> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text("Logradouro: ", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),),
-                        Text(_logradouro, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.blue),)
+                        TextStatic(texto: "Logradouro"),
+                        TextVariable(variavel: "$_logradouro")
                       ],
                     ),
                     SizedBox(height: 6,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text("Complemento: ", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),),
-                        Text(_complemento, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.blue),)
+                        TextStatic(texto: "Complemento"),
+                        TextVariable(variavel: "$_complemento")
                       ],
                     ),
                     SizedBox(height: 6,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text("Bairro: ", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),),
-                        Text(_bairro, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.blue),)
+                        TextStatic(texto: "Bairro"),
+                        TextVariable(variavel: "$_bairro")
                       ],
                     ),
                     SizedBox(height: 6,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text("Cidade: ", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),),
-                        Text(_cidade, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.blue),)
+                        TextStatic(texto: "Cidade"),
+                        TextVariable(variavel: "$_cidade")
                       ],
                     ),
                     SizedBox(height: 6,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text("UF: ", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),),
-                        Text(_uf, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.blue),)
+                        TextStatic(texto: "UF"),
+                        TextVariable(variavel: "$_uf")
                       ],
                     ),
                     SizedBox(height: 6,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text("DDD: ", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),),
-                        Text(_ddd, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Colors.blue),)
+                        TextStatic(texto: "DDD"),
+                        TextVariable(variavel: "$_ddd")
                       ],
                     ),
 
